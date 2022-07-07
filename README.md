@@ -16,3 +16,11 @@ Deal is the Base unit of A0ZVC protocol. It is the core actionable data wrapping
 - ERC721 wrapper will carry all associated rights and liabilities
 - Will be editable while incubated
 - Will seal on transfer
+- Will Deploy incubated entity ERC20
+
+
+### tbd ( cool extras or needed pressing resolve)
+- in-incubation dynamics (distributed supervision, politically ratified collective risk etc.)
+- pricing
+- 2step-edit proposer-validator
+-- distributed anonymous gmi-ngmi duality consequential review with 🔥 lit ceremony (dominoes vote of no confidence aka b_kk__e protocol) 
