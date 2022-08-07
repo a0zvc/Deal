@@ -13,14 +13,31 @@ contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k), IDeal {
     IRegistry R;
     IERC20 Stable;
 
+    uint maxID;
+
     constructor(address R_) {
         R = IRegistry(R_);
         Stable = IERC20(R.opTokenAddress());
     }
 
 
-function lastID() public view returns (uint256) {
-    return 11111;
+
+
+
+/// Private 
+
+function incrementID() private {
+    unchecked { ++ maxID; }
 }
+
+
+//// View
+
+function lastID() public view returns (uint256) {
+    return maxID;
+}
+
+
+
 
 }
