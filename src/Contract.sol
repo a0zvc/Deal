@@ -14,6 +14,7 @@ contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k), IDeal {
     IERC20 Stable;
 
     uint maxID;
+    mapping(uint256 => string) _tokenURIs;
 
     constructor(address R_) {
         R = IRegistry(R_);
@@ -36,7 +37,6 @@ function incrementID() private {
 function lastID() public view returns (uint256) {
     return maxID;
 }
-
 
 
 
