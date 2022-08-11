@@ -2,13 +2,14 @@
 pragma solidity ^0.8.12;
 
 import "openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
+import "./DealERC20.sol";
 import "vest_minimal/MiniVest.sol";
 import "./interfaces/IRegistry.sol";
 import "./interfaces/IDeal.sol";
 
 uint256 constant k = 999999999999999999 * 10 **18;
 
-contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k), IDeal {
+contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k) {
 
     IRegistry R;
     IERC20 Stable;
@@ -22,6 +23,10 @@ contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k), IDeal {
     }
 
 
+
+function createDeal() public returns (address) {
+    ERC20 d = new DealTokenFactory(4, "a","b");
+}
 
 
 

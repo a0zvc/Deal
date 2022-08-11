@@ -1,0 +1,12 @@
+@clones/=lib/vest_minimal/lib/clones-with-immutable-args/src/
+@ds/=lib/vest_minimal/lib/ds-test/src/
+@solmate/=lib/vest_minimal/lib/solmate/src/
+@std/=lib/vest_minimal/lib/forge-std/src/
+clones-with-immutable-args/=lib/vest_minimal/lib/clones-with-immutable-args/src/
+delegatable-eth/=lib/delegatable-eth/
+ds-test/=lib/vest_minimal/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+solmate/=lib/vest_minimal/lib/solmate/src/
+vest_minimal/=lib/vest_minimal/src/
+@openzeppelin/=lib/openzeppelin-contracts/
