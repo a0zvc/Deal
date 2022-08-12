@@ -7,3 +7,6 @@
 [submodule "lib/delegatable-eth"]
 	path = lib/delegatable-eth
 	url = https://github.com/delegatable/delegatable-eth
+[submodule "lib/Registry"]
+	path = lib/Registry
+	url = https://github.com/a0zvc/Registry
