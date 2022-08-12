@@ -9,7 +9,7 @@ import "./interfaces/IDeal.sol";
 
 uint256 constant k = 999999999999999999 * 10 **18;
 
-contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k) {
+contract Deal is ERC721("A0Z Deal","DEAL"), MiniVest(k), IDeal {
 
     IRegistry R;
     IERC20 Stable;
