@@ -4,9 +4,6 @@
 [submodule "lib/delegatable-eth"]
 	path = lib/delegatable-eth
 	url = https://github.com/delegatable/delegatable-eth
-[submodule "lib/Registry"]
-	path = lib/Registry
-	url = https://github.com/a0zvc/Registry
 [submodule "lib/vest_minimal"]
 	path = lib/vest_minimal
 	url = https://github.com/parseb/vest_minimal
