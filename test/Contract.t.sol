@@ -2,9 +2,13 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
+import "../src/Deal.sol";
+import "a0zvc/Registry.sol";
 
-contract ContractTest is Test {
-    function setUp() public {}
+contract createDeal is Test {
+    function setUp() public {
+
+    }
 
     function testExample() public {
         assertTrue(true);
