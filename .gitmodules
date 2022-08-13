@@ -7,3 +7,6 @@
 [submodule "lib/vest_minimal"]
 	path = lib/vest_minimal
 	url = https://github.com/parseb/vest_minimal
+[submodule "lib/Registry"]
+	path = lib/Registry
+	url = https://github.com/a0zvc/Registry
