@@ -3,7 +3,7 @@ pragma solidity ^0.8.4;
 
 import "forge-std/Test.sol";
 import "../src/Deal.sol";
-//import "Registry/Registry.sol";
+import "Registry/Registry.sol";
 
 
 contract createDeal is Test {
