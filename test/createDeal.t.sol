@@ -21,22 +21,25 @@ contract createDeal is Test {
 
 
     function setUp() public {
-        vm.createSelectFork(vm.envString("GOERLI_ALCHEMY"), 7432492);
+        // vm.assume(_x > 101);
+        // vm.assume(_x < type(uint256).max / 2 + 65);
+        vm.createSelectFork(vm.envString("GOERLI_ALCHEMY"), 7432592);
         vm.startPrank(deployer);
         
         iR = IRegistry(registry_goerli);
-        mDAI =  IERC20(opToken); 
+        mDAI =  IERC20(opToken);
+
         
         console.log("OP token is: ",opToken);
         if (mDAI.allowance(deployer, address(iR)) == 0 )
-        { 
+        {   
             mDAI.approve(address(iR), MAX_UINT);
-            iR.setExternalPoints(router,factory,address(mDAI), 10, (20*10**18), 1**18);
-        }
-        // if (opToken == address(0)) {
+            uint stableAmount = mDAI.balanceOf(deployer) / 2;
+            assertTrue(stableAmount > 0, 'balance is 0');
 
-        // }
-        console.log('goerli fork url: ', vm.envString("GOERLI_ALCHEMY"));
+            uint a0zMintAmount = 100 * 10 ** 18;
+            iR.setExternalPoints(router,factory,address(mDAI), 10, stableAmount, a0zMintAmount);
+        }
 
 
         /// @param _router: UniV2 router address
@@ -55,9 +58,7 @@ contract createDeal is Test {
     function testSetupCheck() public {
         assertTrue(iR.opTokenAddress() == address(mDAI), "op token is 0");
         // assertTrue(iR.owner() == deployer, "deployer not owner"); @dev solmate method unavailable
-        assertTrue(iR.calculateInitValue() != 0, "initvalue is 0");
-
-
+        assertTrue(iR.calculateInitValue() != 0, "initvalue is 0"); //@dev @todo fuzz and consider init amount edgecases on calculateInit() 
     }
 
 
