@@ -1,24 +1,27 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.12;
 
-import "vest_minimal/interface/IVestoor.sol";
 import "./interfaces/IRegistry.sol";
 import "./interfaces/IDeal.sol";
+import "vest_minimal/MiniVest.sol";
+
 import "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
+uint256 constant k = 999999999 * 10 **18;
 
-contract DealToken is ERC20 {
+contract DealToken is ERC20, MiniVest(k) {
 
-    IMiniVest Vestoor;
 
-    constructor(string memory name_, 
-    string memory symbol_,
-     address[] memory participants_, 
-     address[] memory amounts_,
-     uint256[] memory days_,
-     address bigBoss_ ) ERC20(name_, symbol_)  {
+
+    constructor(
+      string memory name_, 
+      string memory symbol_,
+      address[] memory participants_, 
+      uint[] memory amounts_,
+      uint[] memory days_,
+      address bigBoss_ ) ERC20(name_, symbol_)  {
+       
         
-        Vestoor = IMiniVest(msg.sender);
 
      }
 

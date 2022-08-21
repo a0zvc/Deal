@@ -10,7 +10,8 @@ interface IRegistry {
     /// @param _tributeShare share of totalsupply as value contribution. 100 for 1%
     /// @param _reliableAmt sender approved amount to add as initial liquidity at pool formation
     /// @param _a0zAmount amount to mint and add as initial liquidity at pool formation
-    function setExternalPoints(address _router, address _factory, address _reliableERC20, uint256 _tributeShare,  uint256 _reliableAmt, uint256 _a0zAmount) external returns (address);
+    function setExternalPoints(address _router, address _factory, address _reliableERC20, 
+    uint256 _tributeShare,  uint256 _reliableAmt, uint256 _a0zAmount) external returns (address);
 
     /// @notice authorizes msg.sender as Deal constructor on the basis of configured conditions
     /// @param _parentToken ERC20 unit of Parent value. Will be paired with children tokens in LP nexus
@@ -26,4 +27,8 @@ interface IRegistry {
 
     /// @notice returns minimum amount of thirdToken() needed to be approved for selfRegister()
     function calculateInitValue() external view returns (uint256);
+
+    /// @notice checks if a token address is registered -> has successfully self-registered
+    /// @param _token address of ERC20 to be checked if registered
+    function isRegistered(address _token) external view returns (bool);
 }
