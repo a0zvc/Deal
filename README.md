@@ -12,10 +12,7 @@ Deal is the Base unit of A0ZVC protocol. It is the core actionable data wrapping
 ### A Deal
 - Will expand on CashCow proprieties
 - Will use linear vesting
-- Will be generated only at request from Registry parent
-- ERC721 wrapper will carry all associated rights and liabilities
-- Will be editable while incubated
-- Will seal on transfer
+
 - Will Deploy incubated entity ERC20
 
 
