@@ -1,0 +1,14 @@
+{
+    moloch_factory_addr: '0x72B8Bf40C8B316753a3E470689DA625759D2b025',
+    wrapper_contract: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+    wrap_n_zap_factory_addr: '0xf89f79A0E5aF89BFa5c4d4FC6F7fD25700bC4905',
+    escrow_minion: '0xceE7f251Bd38B21E8F71C1d62cFbb18219a7F606',
+    block_explorer: 'https://goerli.etherscan.io/',
+    safeMinion: {
+      minion_factory_addr: '0x121931c0Bc458A5f13F3861444AeB036cc8a5363',
+      safe_mutisend_addr: '0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761',
+      safe_sign_lib_addr: '0xa25b3579a295be016de5eb5F082b54B12d45F72C',
+    },
+    disperse_app: '0x3D0e848b6C55153E2b0154734ac6b5288A7f1B6F',
+    poster: '0x3c1f4802be7e26d95b31ef7a566e18f42e360cab',
+}

@@ -57,7 +57,7 @@ contract createDeal is Test {
 
     function testSetupCheck() public {
         assertTrue(iR.opTokenAddress() == address(mDAI), "op token is 0");
-        // assertTrue(iR.owner() == deployer, "deployer not owner"); @dev solmate method unavailable
+        assertTrue(iR.owner() == deployer, "deployer not owner"); //@dev solmate method unavailable
         assertTrue(iR.calculateInitValue() != 0, "initvalue is 0"); //@dev @todo fuzz and consider init amount edgecases on calculateInit() 
     }
 
